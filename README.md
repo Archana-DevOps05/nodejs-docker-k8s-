@@ -101,6 +101,11 @@ Monitor the progress of the Jenkins pipeline from the Jenkins dashboard. The pip
 5. **Push Image to Docker Hub**: Pushes the built image to your Docker Hub repository.
 6. **Deploy App to AWS EC2**: Deploys the application to a cloud instance.
 
+     # Result:
+![staticwebsite](image1.png)
+![staticwebsite](image2.png)
+
+
 
 
     
