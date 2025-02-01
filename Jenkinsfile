@@ -30,7 +30,7 @@ pipeline {
        
         stage("Deploy") {
             steps {
-                sh "docker run -it -d --name mycontainer1 -p 5000:5000 --network bridge -v myvolume:/var node-app"
+                sh "docker run -it -d --name mycontainer1 -p 5000:5000 --network mynetwork -v myvolume:/var node-app"
             }
         }
     }
