@@ -43,4 +43,7 @@ Follow these steps to set up the project locally and configure the CI/CD pipelin
 
 6. **Run Container Using Dockerfile**:
     docker run -it -d --name mycontainer -p 5000:5000 --network mynetwork -v myvolume:/var node-app
+
+   # Result:
+![staticwebsite](image.png)
     
