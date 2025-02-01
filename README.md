@@ -65,16 +65,42 @@ To enable Jenkins to trigger builds based on code changes in your GitHub reposit
 - Go to your GitHub repository settings.
 - Under "Webhooks," add a new webhook that points to your Jenkins server URL (e.g., `http://your-jenkins-url/github-webhook/`).
 
-## 4. Create a Jenkins Pipeline Job
-To set up a new pipeline job in Jenkins:
+# Jenkins Pipeline Setup
 
-- In Jenkins, create a new item and select "Pipeline."
-- Configure it to pull from your GitHub repository.
+## 1. Create a Jenkins Pipeline
+To create a new Jenkins pipeline, follow these steps:
 
-## 5. Add a Jenkinsfile
-Create a `Jenkinsfile` in your repository that defines the stages of your CI/CD pipeline, including build, test, and deploy steps.
+1. **Go to the Jenkins Dashboard**:
+   - Click on **New Item**.
 
----
+2. **Select Pipeline**:
+   - Enter a name for your pipeline, e.g., `node,js-CI/CD-pipeline`.
+   - Choose **Pipeline** and click **OK**.
+
+3. **Configure the Pipeline**:
+   - Under the **Pipeline** section, select **Pipeline script from SCM**.
+   - Enter your GitHub repository URL.
+   - Set the script path to `Jenkinsfile`.
+   - Save and apply the configuration.
+
+   The `Jenkinsfile` defines the CI/CD pipeline for this project.
+
+## 2. Push Docker Image to Docker Hub
+The Jenkins pipeline will automatically push the Docker image to Docker Hub after a successful build. Ensure you have:
+
+- A Docker Hub account.
+- Stored your Docker Hub credentials in Jenkins by navigating to **Manage Jenkins > Manage Credentials**.
+
+## Running the Pipeline
+Monitor the progress of the Jenkins pipeline from the Jenkins dashboard. The pipeline will execute the following steps:
+
+1. **Checkout Code from GitHub**: Pulls the latest code from your repository.
+2. **Install Dependencies**: Installs any required dependencies specified in your project.
+3. **Run Tests**: Executes any tests defined in your project.
+4. **Build Docker Image**: Creates a Docker image based on your application.
+5. **Push Image to Docker Hub**: Pushes the built image to your Docker Hub repository.
+6. **Deploy App to AWS EC2**: Deploys the application to a cloud instance.
+
 
 
     
