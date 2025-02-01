@@ -47,21 +47,34 @@ Follow these steps to set up the project locally and configure the CI/CD pipelin
    # Result:
 ![staticwebsite](image.png)
 
-# Install Java and Jenkins.
+# Install Java and Jenkins
 
-1.**Install Java**
-   sudo apt update
+## 1. Install Java
+First, update your package index and install OpenJDK 11:
+
+sudo apt update
 sudo apt install openjdk-11-jdk -y
 
-2. **Install Jenkins**
-    Follow the installation instructions for your operating system from [Jenkins' official website](https://www.jenkins.io/doc/book/installing/).
-3. **Configure GitHub Webhook**:
+
+## 2. Install Jenkins
+Follow the installation instructions for your operating system from [Jenkins' official website](https://www.jenkins.io/doc/book/installing/).
+
+## 3. Configure GitHub Webhook
+To enable Jenkins to trigger builds based on code changes in your GitHub repository:
+
 - Go to your GitHub repository settings.
 - Under "Webhooks," add a new webhook that points to your Jenkins server URL (e.g., `http://your-jenkins-url/github-webhook/`).
 
-4. **Create a Jenkins Pipeline Job**:
+## 4. Create a Jenkins Pipeline Job
+To set up a new pipeline job in Jenkins:
+
 - In Jenkins, create a new item and select "Pipeline."
 - Configure it to pull from your GitHub repository.
 
-5. **Add a Jenkinsfile**: Create a `Jenkinsfile` in your repository that defines the stages of your CI/CD pipeline, including build, test, and deploy steps.
+## 5. Add a Jenkinsfile
+Create a `Jenkinsfile` in your repository that defines the stages of your CI/CD pipeline, including build, test, and deploy steps.
+
+---
+
+
     
