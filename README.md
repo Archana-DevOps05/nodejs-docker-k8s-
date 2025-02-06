@@ -38,8 +38,7 @@ This project demonstrates how to deploy a simple Node.js application on Kubernet
 4. **Start Minikube**:
    After installing Minikube, start it with the following command:
    ```bash
-   
-minikube start --driver=docker --vm=true
+   minikube start --driver=docker --vm=true
 
 This command will start a single-node Kubernetes cluster inside a Docker container.
 
@@ -96,6 +95,8 @@ kubectl port-forward service/nodejs -n webapp 5000:5000 --address=0.0.0.0 &
 Open your browser and visit:
 
 http://<your-server-ip>:5000
+
+  ![staticwebsite](image.png).
 
 
 
