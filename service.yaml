@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-service
+  namespace: nodejs
+  labels:
+    app: nodejs-app  # Corrected indentation for 'labels'
+spec:
+  selector:
+    app: nodejs-app
+  ports:
+    - protocol: TCP    # Corrected to lowercase 'protocol'
+      port: 5000        # Corrected to lowercase 'port'
+      targetPort: 5000
+  type: LoadBalancer
