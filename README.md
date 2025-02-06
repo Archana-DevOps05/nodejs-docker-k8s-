@@ -24,11 +24,11 @@ This project demonstrates how to deploy a simple Node.js application on Kubernet
    [kubectl Installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
 3. Minikube can run a Kubernetes cluster either in a VM or locally via Docker. This guide demonstrates the Docker method.
-
-  sudo apt install -y docker.io
+   '''bash
+   sudo apt install -y docker.io
 
   Start and enable Docker:
-
+  '''bash
   sudo systemctl enable --now docker
 
   Add current user to the Docker group (to use Docker without root):
@@ -94,7 +94,7 @@ kubectl port-forward service/nodejs -n webapp 5000:5000 --address=0.0.0.0 &
 
 Open your browser and visit:
 
-http://<your-server-ip>:5000
+http://your-server-ip:5000
 
   ![staticwebsite](image.png).
 
