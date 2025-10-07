@@ -101,10 +101,7 @@ http://your-server-ip:5000
   ![staticwebsite](image.png).
 
 
-### 4. Push Image to Docker Hub
-    docker push archanasingh05/nextjs-basic-app:multi
-    
-<img width="1366" height="768" alt="Screenshot from 2025-10-06 22-49-52" src="https://github.com/user-attachments/assets/659fb026-2ba5-46d2-af84-12b1aa5ad5af" />
+
 
 
 
